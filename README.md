@@ -1,4 +1,4 @@
-# qsx-data-parser
+# QSX Data Parser
  
 This SIMPL Sharp module reads in a CSV-formatted Lutron QSX Integration report from a processor and parses the data to output Hrefs and label info associated with the Lutron components. 
 
@@ -10,5 +10,5 @@ Currently the only CCI compatible CCI modules are:
 - LED control
 - Area control
 
-# Future features:
+# Future Features:
 - Shading module compatibility

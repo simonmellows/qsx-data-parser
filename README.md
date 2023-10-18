@@ -10,5 +10,5 @@ Currently the only CCI compatible CCI modules are:
 - LED control
 - Area control
 
-Future features:
+# Future features:
 - Shading module compatibility

@@ -1,0 +1,95 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:
+System Name:
+System Number:
+Programmer:
+Comments:
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+*******************************************************************************************/
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+#DEFINE_CONSTANT	ZoneCount	50
+
+#HELP_BEGIN
+AreaHref 	- Input for the Href of the area as defined in Lutron.
+	
+ZoneLabel	- Zone labels in order of there definition in integration report.
+ZoneHref	- Zone Href in order of its definition in integration report.
+#HELP_END
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+#USER_SIMPLSHARP_LIBRARY "QsxDataExtractor"
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT 	GetData, _skip_;
+
+STRING_INPUT 	AreaHref[255]; 
+
+DIGITAL_OUTPUT	DataReady, _skip_;
+STRING_OUTPUT 	Error, _skip_, ZoneLabel[ZoneCount], _skip_, ZoneHref[ZoneCount];
+
+/*******************************************************************************************
+  Parameter Properties
+*******************************************************************************************/
+
+/*******************************************************************************************
+  Global Variables
+*******************************************************************************************/
+
+/*******************************************************************************************
+  Event Handlers
+*******************************************************************************************/
+PUSH GetData
+{
+
+	integer x, status;
+	zoneDataStruct data;
+	
+	if(Len(AreaHref))
+	{
+		for(x = 1 to ZoneCount)
+		{
+			ZoneLabel[x] = "";
+			ZoneHref[x] = "";
+			
+			status = DataExtractor.GetZoneData(data, AreaHref, x);
+			
+			if(status){
+				ZoneLabel[x] = data.label;
+				ZoneHref[x] = data.href;
+			}
+		}
+		DataReady = 1;
+	}
+	else
+	{
+		Error = "No area specified";
+		DataReady = 0;
+	}
+}
+
+/*******************************************************************************************
+  Main()
+*******************************************************************************************/
+
+Function Main()
+{
+	WaitForInitializationComplete();
+}
+
+

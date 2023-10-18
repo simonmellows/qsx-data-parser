@@ -1,0 +1,86 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:
+System Name:
+System Number:
+Programmer:
+Comments:
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+*******************************************************************************************/
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+#HELP_BEGIN
+Only one instance of this module is needed in a program.
+Make sure to trigger ReadData before any 'GetData' signals are triggered on peripheral modules.
+Make sure file path is correct. Status will report if there is an issue parsing data.
+File path example for VC-4: "../User\Integration Report.csv" (with double backslash)
+
+ReadComplete will go high once a CSV file is successfully read. Connect this to the GetData signal of peripheral modules.
+#HELP_END
+
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+#USER_SIMPLSHARP_LIBRARY "QsxDataExtractor"
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT 	ReadData;
+
+DIGITAL_OUTPUT 	ReadComplete;
+STRING_OUTPUT 	Status;
+
+/*******************************************************************************************
+  Parameters
+*******************************************************************************************/
+STRING_PARAMETER CsvFilePath[255];
+
+/*******************************************************************************************
+  Parameter Properties
+*******************************************************************************************/
+
+/*******************************************************************************************
+  Global Variables
+*******************************************************************************************/
+
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+//Program dataExtractor;
+
+PUSH ReadData
+{
+	string s[255];
+    s = DataExtractor.ReadData(CsvFilePath);
+    Status = s;
+    if(s = "File read complete. Status: SUCCESS")
+    {
+    	ReadComplete = 1;
+    }
+}
+
+
+/*******************************************************************************************
+  Main()
+*******************************************************************************************/
+
+Function Main()
+{
+	WaitForInitializationComplete();
+}
+
+

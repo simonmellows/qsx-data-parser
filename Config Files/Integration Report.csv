@@ -1,0 +1,419 @@
+﻿Integration Report
+
+Project Name: ,Grosvenor Garden Mews,Type:,Residential,Location:,"London, England"
+Quotation Number:,,Created by:,Marius Mihaila,Document Revision:,
+Lutron Designer 23.2.2.14097,,Created on:,"June 30, 2023",,
+
+Device name,Model,href,Component,Component href,Component Name
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎KP 003\‎CSD 001,HQWT-S-PRW-BN,/device/1820,Button 1,/button/1829,At Home
+,,,Button 2,/button/1833,Ciao
+,,,Button 3,/button/1837,Off
+,,,Button 16,/button/1841,
+,,,Button 17,/button/1843,
+,,,Led 1,/led/1825,
+,,,Led 2,/led/1826,
+,,,Led 3,/led/1827,
+,,,Button 1,/button/648,Amanda's Kitchen
+,,,Button 4,/button/652,Off
+,,,Button 5,/button/631,Morning
+,,,Button 6,/button/635,Dining
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎KP 004\‎CSD 001,HQWT-S-PR2W-BN,/device/620,Button 7,/button/639,Cooking
+,,,Button 18,/button/643,
+,,,Button 19,/button/645,
+,,,Led 5,/led/625,
+,,,Led 6,/led/626,
+,,,Led 7,/led/627,
+,,,Led 1,/led/628,
+,,,Led 4,/led/629,
+,,,Button 1,/button/686,Work
+,,,Button 2,/button/690,Relax
+,,,Button 3,/button/694,Off
+,,,Button 16,/button/698,
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎KP 002\‎CSD 001,HQWT-S-PRW-BN,/device/677,Button 17,/button/700,
+,,,Led 1,/led/682,
+,,,Led 2,/led/683,
+,,,Led 3,/led/684,
+,,,Button 1,/button/730,Morning
+,,,Button 2,/button/734,Night
+,,,Button 3,/button/738,Off
+,,,Button 16,/button/742,
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎KP 001\‎CSD 001,HQWT-S-PRW-BN,/device/721,Button 17,/button/744,
+,,,Led 1,/led/726,
+,,,Led 2,/led/727,
+,,,Led 3,/led/728,
+,,,Button 1,/button/774,Morning
+,,,Button 2,/button/778,Night
+,,,Button 3,/button/782,Off
+,,,Button 16,/button/786,
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎KP 005\‎CSD 001,HQWT-S-PRW-BN,/device/765,Button 17,/button/788,
+,,,Led 1,/led/770,
+,,,Led 2,/led/771,
+,,,Led 3,/led/772,
+,,,Button 1,/button/818,Morning
+,,,Button 2,/button/822,Night
+,,,Button 3,/button/826,Off
+,,,Button 16,/button/830,
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎KP 006\‎CSD 001,HQWT-S-PRW-BN,/device/809,Button 17,/button/832,
+,,,Led 1,/led/814,
+,,,Led 2,/led/815,
+,,,Led 3,/led/816,
+,,,Button 1,/button/1355,Morning
+,,,Button 2,/button/1359,Night
+,,,Button 3,/button/1363,Off
+,,,Button 16,/button/1367,
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎KP 208\‎CSD 001,HQWT-S-PRW-BN,/device/1346,Button 17,/button/1369,
+,,,Led 1,/led/1351,
+,,,Led 2,/led/1352,
+,,,Led 3,/led/1353,
+Grosvenor Garden Mews\‎Ground Floor\‎AV Room\‎IO 001,QSE-IO,/device/4152,,,
+,,,Button 1,/button/893,On
+,,,Button 4,/button/897,Off
+,,,Button 5,/button/876,Cocktail
+,,,Button 6,/button/880,Dinner
+,,,Button 7,/button/884,Event
+,,,Button 18,/button/888,
+,,,Button 19,/button/890,
+,,,Led 5,/led/870,
+,,,Led 6,/led/871,
+,,,Led 7,/led/872,
+,,,Led 1,/led/873,
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎KP 101\‎CSD 001,HQWT-S-PR2W-BN,/device/865,Led 4,/led/874,
+,,,Button 1,/button/4311,On
+,,,Button 4,/button/4315,Off
+,,,Button 5,/button/4294,Cocktail
+,,,Button 6,/button/4298,Dinner
+,,,Button 7,/button/4302,Event
+,,,Button 18,/button/4306,
+,,,Button 19,/button/4308,
+,,,Led 5,/led/4288,
+,,,Led 6,/led/4289,
+,,,Led 7,/led/4290,
+,,,Led 1,/led/4291,
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎KP 102\‎CSD 001,HQWT-S-PR2W-BN,/device/4283,Led 4,/led/4292,
+,,,Button 1,/button/931,Morning
+,,,Button 2,/button/935,Night
+,,,Button 3,/button/939,Off
+Grosvenor Garden Mews\‎First Floor\‎WC\‎KP 103\‎CSD 001,HQWT-S-PRW-BN,/device/922,Button 16,/button/943,
+,,,Button 17,/button/945,
+,,,Led 1,/led/927,
+,,,Led 2,/led/928,
+,,,Led 3,/led/929,
+,,,Button 1,/button/1041,Bar On
+,,,Button 2,/button/1045,Bar Off
+,,,Button 3,/button/1049,Rooflight Open
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎KP 104\‎CSD 001,HQWT-S-PR4W-BN,/device/1011,Button 4,/button/1053,Rooflight Close
+,,,Button 5,/button/1024,Chez Amanda
+,,,Button 6,/button/1028,Morning
+,,,Button 7,/button/1032,Off
+,,,Button 18,/button/1036,
+,,,Button 19,/button/1038,
+,,,Led 5,/led/1016,
+,,,Led 6,/led/1017,
+,,,Led 7,/led/1018,
+,,,Led 1,/led/1019,
+,,,Led 2,/led/1020,
+,,,Led 3,/led/1021,
+,,,Led 4,/led/1022,
+,,,Button 1,/button/1101,Morning
+,,,Button 2,/button/1105,Night
+,,,Button 3,/button/1109,Off
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎KP 201\‎CSD 001,HQWT-S-PRW-BN,/device/1092,Button 16,/button/1113,
+,,,Button 17,/button/1115,
+,,,Led 1,/led/1097,
+,,,Led 2,/led/1098,
+,,,Led 3,/led/1099,
+,,,Button 1,/button/1152,Wall Light
+,,,Button 4,/button/1156,Bedroom Off
+,,,Button 5,/button/1135,Morning
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎KP 204\‎CSD 001,HQWT-S-PR2W-BN,/device/1124,Button 6,/button/1139,Night
+,,,Button 7,/button/1143,Off
+,,,Button 18,/button/1147,
+,,,Button 19,/button/1149,
+,,,Led 5,/led/1129,
+,,,Led 6,/led/1130,
+,,,Led 7,/led/1131,
+,,,Led 1,/led/1132,
+,,,Led 4,/led/1133,
+,,,Button 1,/button/1197,Wall Light
+,,,Button 4,/button/1201,Bedroom Off
+,,,Button 5,/button/1180,Morning
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎KP 205\‎CSD 001,HQWT-S-PR2W-BN,/device/1169,Button 6,/button/1184,Night
+,,,Button 7,/button/1188,Off
+,,,Button 18,/button/1192,
+,,,Button 19,/button/1194,
+,,,Led 5,/led/1174,
+,,,Led 6,/led/1175,
+,,,Led 7,/led/1176,
+,,,Led 1,/led/1177,
+,,,Led 4,/led/1178,
+,,,Button 1,/button/1235,Morning
+,,,Button 2,/button/1239,Night
+,,,Button 3,/button/1243,Off
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎KP 203\‎CSD 001,HQWT-S-PRW-BN,/device/1226,Button 16,/button/1247,
+,,,Button 17,/button/1249,
+,,,Led 1,/led/1231,
+,,,Led 2,/led/1232,
+,,,Led 3,/led/1233,
+,,,Button 1,/button/1279,Morning
+,,,Button 2,/button/1283,Night
+,,,Button 3,/button/1287,Off
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎KP 202\‎CSD 001,HQWT-S-PRW-BN,/device/1270,Button 16,/button/1291,
+,,,Button 17,/button/1293,
+,,,Led 1,/led/1275,
+,,,Led 2,/led/1276,
+,,,Led 3,/led/1277,
+,,,Button 1,/button/1431,Terrace
+,,,Button 2,/button/1435,Coffee Unit
+,,,Button 3,/button/1439,Off
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom Terrace\‎KP 206\‎CSD 001,HQWT-S-PRW-BN,/device/1422,Button 16,/button/1443,
+,,,Button 17,/button/1445,
+,,,Led 1,/led/1427,
+,,,Led 2,/led/1428,
+,,,Led 3,/led/1429,
+,,,Button 1,/button/1323,Morning
+,,,Button 2,/button/1327,Night
+,,,Button 3,/button/1331,Off
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎KP 211\‎CSD 001,HQWT-S-PRW-BN,/device/1314,Button 16,/button/1335,
+,,,Button 17,/button/1337,
+,,,Led 1,/led/1319,
+,,,Led 2,/led/1320,
+,,,Led 3,/led/1321,
+,,,Button 1,/button/1387,Morning
+,,,Button 2,/button/1391,Night
+,,,Button 3,/button/1395,Off
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎KP 209\‎CSD 001,HQWT-S-PRW-BN,/device/1378,Button 16,/button/1399,
+,,,Button 17,/button/1401,
+,,,Led 1,/led/1383,
+,,,Led 2,/led/1384,
+,,,Led 3,/led/1385,
+,,,Button 1,/button/1519,Morning
+,,,Button 2,/button/1523,Night
+,,,Button 3,/button/1527,Off
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎KP 210\‎CSD 001,HQWT-S-PRW-BN,/device/1510,Button 16,/button/1531,
+,,,Button 17,/button/1533,
+,,,Led 1,/led/1515,
+,,,Led 2,/led/1516,
+,,,Led 3,/led/1517,
+,,,Button 1,/button/1475,Terrace
+,,,Button 2,/button/1479,Coffee Unit
+,,,Button 3,/button/1483,Off
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace\‎KP 207\‎CSD 001,HQWT-S-PRW-BN,/device/1466,Button 16,/button/1487,
+,,,Button 17,/button/1489,
+,,,Led 1,/led/1471,
+,,,Led 2,/led/1472,
+,,,Led 3,/led/1473,
+
+Zone Name,href
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎Pendant,/zone/1912
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎Downlights,/zone/1927
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎5 AMP,/zone/1938
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Downlights,/zone/1972
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Downlight To Seating,/zone/1983
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Pendant,/zone/1994
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎LED Luminaire to Joinery,/zone/2017
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎LED Luminaire to Joinery Island,/zone/2028
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎LED Luminaire to Seating,/zone/2039
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎Downlights,/zone/2050
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎5 Amp,/zone/2072
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Adjustable Downlights,/zone/2083
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Linear LED to Mirror Panel,/zone/2105
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Linear LED To Niche,/zone/2881
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎Adjustable Downlights,/zone/2139
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎Pendant,/zone/2150
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎5 AMP,/zone/2161
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Adjustable Downlight,/zone/2172
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Fixed Downlight,/zone/2183
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Linear LED to Joinery,/zone/2194
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Linear LED to Mirror,/zone/2205
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎Low Level Recessed,/zone/1961
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎Low Level Recessed 01,/zone/2216
+Grosvenor Garden Mews\‎Ground Floor\‎Corridor\‎Adjustable Downlights,/zone/2128
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Adjustable Downlights,/zone/2238
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Table Downlights,/zone/2249
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Pendant,/zone/2260
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Uplight,/zone/2271
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎5 AMP,/zone/2282
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Floor 5 AMP,/zone/2293
+Grosvenor Garden Mews\‎First Floor\‎WC\‎Downlights,/zone/2304
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Linear LED BAR,/zone/2349
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Uplights,/zone/2360
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Floor Recessed Uplights,/zone/2371
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Linear LED Luminaire to Terrace,/zone/2394
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Linear LED Luminaire to Sitting,/zone/2405
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Linear LED Luminaire to Bar Back,/zone/4089
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Linear LED Luminaire to Bar Front,/zone/4141
+Grosvenor Garden Mews\‎First Floor\‎Stairs to Second\‎Linear LED Luminaire,/zone/2451
+Grosvenor Garden Mews\‎First Floor\‎Landing\‎Landing Downlights,/zone/2227
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Adjustable Downlight,/zone/2462
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Wall Light,/zone/2473
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Floor 5 AMP Socket,/zone/2484
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Linear LED Luminaire,/zone/2495
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Adjustable Downlight,/zone/2506
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Linear LED to Mirror,/zone/2528
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Pendant,/zone/2539
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Linear LED Luminaire,/zone/2550
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Adjustable Downlight,/zone/2561
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Wall Light,/zone/2572
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Floor 5 AMP,/zone/2583
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Linear LED Luminaire,/zone/2594
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Lobby Downlights,/zone/2605
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Adjustable Downlights,/zone/2616
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Floor 5 AMP Socket,/zone/2627
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Pendant,/zone/2638
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Floor 5 AMP Socket 01,/zone/2649
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎Adjustable Downlights,/zone/2660
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎Linear LED to Mirror,/zone/2693
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace\‎Wall Light,/zone/2715
+Grosvenor Garden Mews\‎Second Floor\‎Landing\‎Adjustabe Downlights,/zone/2428
+Grosvenor Garden Mews\‎Second Floor\‎Landing\‎Linear LED to Roof Light,/zone/2682
+Grosvenor Garden Mews\‎External\‎Wall Lights,/zone/2909
+
+
+Area Name,href
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance,/area/561
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen,/area/605
+Grosvenor Garden Mews\‎Ground Floor\‎Study,/area/663
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room,/area/707
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3,/area/751
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite,/area/795
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First,/area/1949
+Grosvenor Garden Mews\‎Ground Floor\‎Corridor,/area/2116
+Grosvenor Garden Mews\‎Ground Floor\‎AV Room,/area/2726
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing,/area/851
+Grosvenor Garden Mews\‎First Floor\‎WC,/area/908
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar,/area/2337
+Grosvenor Garden Mews\‎First Floor\‎Stairs to Second,/area/2439
+Grosvenor Garden Mews\‎First Floor\‎Landing,/area/4211
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom,/area/1078
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom,/area/1212
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing,/area/1256
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom Terrace,/area/1408
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2,/area/1300
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite,/area/1496
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace,/area/1452
+Grosvenor Garden Mews\‎Second Floor\‎Landing,/area/2416
+Grosvenor Garden Mews\‎External,/area/2897
+
+
+Area Scene Name,href
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎Off Scene,/areascene/565
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎Scene 001,/areascene/566
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎Scene 002,/areascene/567
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎Scene 003,/areascene/568
+Grosvenor Garden Mews\‎Ground Floor\‎Entrance\‎Scene 004,/areascene/569
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Off Scene,/areascene/609
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Scene 001,/areascene/610
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Scene 002,/areascene/611
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Scene 003,/areascene/612
+Grosvenor Garden Mews\‎Ground Floor\‎Kitchen\‎Scene 004,/areascene/613
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎Off Scene,/areascene/667
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎Scene 001,/areascene/668
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎Scene 002,/areascene/669
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎Scene 003,/areascene/670
+Grosvenor Garden Mews\‎Ground Floor\‎Study\‎Scene 004,/areascene/671
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Off Scene,/areascene/711
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Scene 001,/areascene/712
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Scene 002,/areascene/713
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Scene 003,/areascene/714
+Grosvenor Garden Mews\‎Ground Floor\‎Wet Room\‎Scene 004,/areascene/715
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎Off Scene,/areascene/755
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎Scene 001,/areascene/756
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎Scene 002,/areascene/757
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎Scene 003,/areascene/758
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3\‎Scene 004,/areascene/759
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Off Scene,/areascene/799
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Scene 001,/areascene/800
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Scene 002,/areascene/801
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Scene 003,/areascene/802
+Grosvenor Garden Mews\‎Ground Floor\‎Bedroom 3 Ensuite\‎Scene 004,/areascene/803
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎Off Scene,/areascene/1953
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎Scene 001,/areascene/1954
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎Scene 002,/areascene/1955
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎Scene 003,/areascene/1956
+Grosvenor Garden Mews\‎Ground Floor\‎Stairs to First\‎Scene 004,/areascene/1957
+Grosvenor Garden Mews\‎Ground Floor\‎Corridor\‎Off Scene,/areascene/2120
+Grosvenor Garden Mews\‎Ground Floor\‎Corridor\‎Scene 001,/areascene/2121
+Grosvenor Garden Mews\‎Ground Floor\‎Corridor\‎Scene 002,/areascene/2122
+Grosvenor Garden Mews\‎Ground Floor\‎Corridor\‎Scene 003,/areascene/2123
+Grosvenor Garden Mews\‎Ground Floor\‎Corridor\‎Scene 004,/areascene/2124
+Grosvenor Garden Mews\‎Ground Floor\‎AV Room\‎Off Scene,/areascene/2730
+Grosvenor Garden Mews\‎Ground Floor\‎AV Room\‎Scene 001,/areascene/2731
+Grosvenor Garden Mews\‎Ground Floor\‎AV Room\‎Scene 002,/areascene/2732
+Grosvenor Garden Mews\‎Ground Floor\‎AV Room\‎Scene 003,/areascene/2733
+Grosvenor Garden Mews\‎Ground Floor\‎AV Room\‎Scene 004,/areascene/2734
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Off Scene,/areascene/855
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Scene 001,/areascene/856
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Scene 002,/areascene/857
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Scene 003,/areascene/858
+Grosvenor Garden Mews\‎First Floor\‎Dining/Drawing\‎Scene 004,/areascene/859
+Grosvenor Garden Mews\‎First Floor\‎WC\‎Off Scene,/areascene/912
+Grosvenor Garden Mews\‎First Floor\‎WC\‎Scene 001,/areascene/913
+Grosvenor Garden Mews\‎First Floor\‎WC\‎Scene 002,/areascene/914
+Grosvenor Garden Mews\‎First Floor\‎WC\‎Scene 003,/areascene/915
+Grosvenor Garden Mews\‎First Floor\‎WC\‎Scene 004,/areascene/916
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Off Scene,/areascene/2341
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Scene 001,/areascene/2342
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Scene 002,/areascene/2343
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Scene 003,/areascene/2344
+Grosvenor Garden Mews\‎First Floor\‎Terrace Bar\‎Scene 004,/areascene/2345
+Grosvenor Garden Mews\‎First Floor\‎Stairs to Second\‎Off Scene,/areascene/2443
+Grosvenor Garden Mews\‎First Floor\‎Stairs to Second\‎Scene 001,/areascene/2444
+Grosvenor Garden Mews\‎First Floor\‎Stairs to Second\‎Scene 002,/areascene/2445
+Grosvenor Garden Mews\‎First Floor\‎Stairs to Second\‎Scene 003,/areascene/2446
+Grosvenor Garden Mews\‎First Floor\‎Stairs to Second\‎Scene 004,/areascene/2447
+Grosvenor Garden Mews\‎First Floor\‎Landing\‎Off Scene,/areascene/4215
+Grosvenor Garden Mews\‎First Floor\‎Landing\‎Scene 001,/areascene/4216
+Grosvenor Garden Mews\‎First Floor\‎Landing\‎Scene 002,/areascene/4217
+Grosvenor Garden Mews\‎First Floor\‎Landing\‎Scene 003,/areascene/4218
+Grosvenor Garden Mews\‎First Floor\‎Landing\‎Scene 004,/areascene/4219
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Off Scene,/areascene/1082
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Scene 001,/areascene/1083
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Scene 002,/areascene/1084
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Scene 003,/areascene/1085
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom\‎Scene 004,/areascene/1086
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Off Scene,/areascene/1216
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Scene 001,/areascene/1217
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Scene 002,/areascene/1218
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Scene 003,/areascene/1219
+Grosvenor Garden Mews\‎Second Floor\‎Master Bathroom\‎Scene 004,/areascene/1220
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Off Scene,/areascene/1260
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Scene 001,/areascene/1261
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Scene 002,/areascene/1262
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Scene 003,/areascene/1263
+Grosvenor Garden Mews\‎Second Floor\‎Master Dressing\‎Scene 004,/areascene/1264
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom Terrace\‎Off Scene,/areascene/1412
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom Terrace\‎Scene 001,/areascene/1413
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom Terrace\‎Scene 002,/areascene/1414
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom Terrace\‎Scene 003,/areascene/1415
+Grosvenor Garden Mews\‎Second Floor\‎Master Bedroom Terrace\‎Scene 004,/areascene/1416
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Off Scene,/areascene/1304
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Scene 001,/areascene/1305
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Scene 002,/areascene/1306
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Scene 003,/areascene/1307
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2\‎Scene 004,/areascene/1308
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎Off Scene,/areascene/1500
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎Scene 001,/areascene/1501
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎Scene 002,/areascene/1502
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎Scene 003,/areascene/1503
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Ensuite\‎Scene 004,/areascene/1504
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace\‎Off Scene,/areascene/1456
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace\‎Scene 001,/areascene/1457
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace\‎Scene 002,/areascene/1458
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace\‎Scene 003,/areascene/1459
+Grosvenor Garden Mews\‎Second Floor\‎Bedroom 2 Terrace\‎Scene 004,/areascene/1460
+Grosvenor Garden Mews\‎Second Floor\‎Landing\‎Off Scene,/areascene/2420
+Grosvenor Garden Mews\‎Second Floor\‎Landing\‎Scene 001,/areascene/2421
+Grosvenor Garden Mews\‎Second Floor\‎Landing\‎Scene 002,/areascene/2422
+Grosvenor Garden Mews\‎Second Floor\‎Landing\‎Scene 003,/areascene/2423
+Grosvenor Garden Mews\‎Second Floor\‎Landing\‎Scene 004,/areascene/2424
+Grosvenor Garden Mews\‎External\‎Off Scene,/areascene/2901
+Grosvenor Garden Mews\‎External\‎Scene 001,/areascene/2902
+Grosvenor Garden Mews\‎External\‎Scene 002,/areascene/2903
+Grosvenor Garden Mews\‎External\‎Scene 003,/areascene/2904
+Grosvenor Garden Mews\‎External\‎Scene 004,/areascene/2905
+
+
+"Lutron Electronics Co., Inc.
+7200 Suter Road
+Coopersburg, PA 18036, USA
++1.610.282.3800 | Fax: +1.610.282.1146"

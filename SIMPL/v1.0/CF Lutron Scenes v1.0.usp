@@ -1,0 +1,124 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:
+System Name:
+System Number:
+Programmer:
+Comments:
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+*******************************************************************************************/
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+#DEFINE_CONSTANT	SceneCount	50
+
+#HELP_BEGIN
+AreaHref 	- Input for the Href of the area as defined in Lutron.
+KeypadHref 	- Optional input for Href of desired Lutron keypad to use for area scenes.
+		- If undefined (empty), the default Lutron Area scenes will be used.
+	
+SceneLabel	- Scene labels in order of there definition in integration report.
+		- For example, if using keypad scenes, the label associated with Button 14 will come through on SceneLabel[14].
+SceneHref	- Scene Href in order of it's Button/Scene definition in integration report.
+SceneFbHref	- LED Href in order of it's Led definition in integration report.
+		- This does not apply when using Area scenes.
+#HELP_END
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+#USER_SIMPLSHARP_LIBRARY "QsxDataExtractor"
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT 	GetData, _skip_;
+
+STRING_INPUT 	AreaHref[255], KeypadHref[255]; 
+
+DIGITAL_OUTPUT	DataReady, _skip_;
+
+STRING_OUTPUT 	Error, _skip_, SceneLabel[SceneCount], _skip_, SceneHref[SceneCount], _skip_, SceneFbHref[SceneCount,SceneCount];
+
+/*******************************************************************************************
+  Parameter Properties
+*******************************************************************************************/
+
+/*******************************************************************************************
+  Global Variables
+*******************************************************************************************/
+
+/*******************************************************************************************
+  Event Handlers
+*******************************************************************************************/
+PUSH GetData
+{
+
+	integer x, status;
+	sceneDataStruct data;
+	
+	// If keypad Href is defined, pull data for specified keypad
+	if(Len(AreaHref) && Len(KeypadHref))
+	{
+		for(x = 1 to SceneCount)
+		{
+			SceneLabel[x] = "";
+			SceneHref[x] = "";
+			SceneFbHref[x] = "";
+			
+			status = DataExtractor.GetSceneData(data, AreaHref, x, KeypadHref);
+			
+			if(status){
+				SceneLabel[x] = data.label;
+				SceneHref[x] = data.href;
+				SceneFbHref[x] = data.fbHref;
+			}
+		}
+		DataReady = 1;
+	}
+	// Otherwise, if area Href is defined, pull scene data for that area
+	else if(Len(AreaHref))
+	{
+		for(x = 1 to SceneCount)
+		{
+			SceneLabel[x] = "";
+			SceneHref[x] = "";
+			SceneFbHref[x] = "";
+
+			status = DataExtractor.GetSceneData(data, AreaHref, x, "");
+	
+			if(status){
+				SceneLabel[x] = data.label;
+				SceneHref[x] = data.href;
+				SceneFbHref[x] = data.fbHref;
+			}
+		}
+		DataReady = 1;
+	}
+	else
+	{
+		Error = "No area specified";
+	}
+
+	
+}
+
+/*******************************************************************************************
+  Main()
+*******************************************************************************************/
+
+Function Main()
+{
+	WaitForInitializationComplete();
+}
+
+

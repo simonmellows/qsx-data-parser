@@ -10,5 +10,7 @@ Currently the only CCI compatible CCI modules are:
 - LED control
 - Area control
 
+Load the QSX integration report to the Crestron processor and point the module to its file path.
+
 # Future Features:
 - Shading module compatibility

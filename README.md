@@ -17,3 +17,4 @@ Currently the only CCI compatible CCI modules are:
 
 # Future Features:
 - Shading module compatibility
+- Ability to determine if a zone is switched or dimmable (will require a different report).

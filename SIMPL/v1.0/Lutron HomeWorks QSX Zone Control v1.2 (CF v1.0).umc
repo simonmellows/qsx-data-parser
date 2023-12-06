@@ -22,7 +22,7 @@ PgmNm=AH
 DlrNm=Control Concepts, Inc.
 CltNm=Lutron QSX
 Incl=1766,2574,2651,2817,2886,2938,2947,3181,3197,3233,3710,3735,3736,3816,3888,4176,4308,4476,4591,4769,5360,5388,5420,5455,5497,5699,5813,5919,6150,6161,6089,6101,6114,6136,6343,6356,6357,6423,
-McNm=Lutron HomeWorks QSX Zone Control v1.2
+McNm=Lutron HomeWorks QSX Zone Control v1.2 (CF v1.0)
 SmVr=1177
 DvVr=1177
 TpN1=1
@@ -49,15 +49,15 @@ Mx1=0
 ObjTp=Bw
 H=1
 Lx=0
-Ly=637
+Ly=136
 Rx=2600
 Ry=1274
 Xm=-1
 Ym=-1
 SH=7
 Z=100
-Ht=4
-Hi=5
+Ht=1
+Hi=13
 ]
 [
 ObjTp=Bw
@@ -70,8 +70,8 @@ Xm=-1
 Ym=-1
 SH=6
 Z=100
-Ht=4
-Hi=1
+Ht=1
+Hi=9
 ]
 [
 ObjTp=Symbol
@@ -316,7 +316,7 @@ I7=4
 I8=5
 I10=6
 I11=7
-I13=17
+I13=8
 I15=17
 I16=18
 I18=9

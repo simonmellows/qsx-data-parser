@@ -73,10 +73,6 @@ PUSH GetData
 				ShadeGroupLabel[x] = data.label;
 				ShadeGroupHref[x] = data.href;
 			}
-			else if(status > 1)
-			{
-				Error = "Error: " + Itoa(status);
-			}
 		}
 		DataReady = 1;
 	}

@@ -63,29 +63,18 @@ namespace UserModule_CF_LUTRON_SHADEGROUPS_V1_0
                             SHADEGROUPHREF [ X]  .UpdateValue ( DATA . href  ) ; 
                             } 
                         
-                        else 
-                            {
-                            __context__.SourceCodeLine = 76;
-                            if ( Functions.TestForTrue  ( ( Functions.BoolToInt ( STATUS > 1 ))  ) ) 
-                                { 
-                                __context__.SourceCodeLine = 78;
-                                ERROR  .UpdateValue ( "Error: " + Functions.ItoA (  (int) ( STATUS ) )  ) ; 
-                                } 
-                            
-                            }
-                        
                         __context__.SourceCodeLine = 65;
                         } 
                     
-                    __context__.SourceCodeLine = 81;
+                    __context__.SourceCodeLine = 77;
                     DATAREADY  .Value = (ushort) ( 1 ) ; 
                     } 
                 
                 else 
                     { 
-                    __context__.SourceCodeLine = 85;
+                    __context__.SourceCodeLine = 81;
                     ERROR  .UpdateValue ( "No area specified"  ) ; 
-                    __context__.SourceCodeLine = 86;
+                    __context__.SourceCodeLine = 82;
                     DATAREADY  .Value = (ushort) ( 0 ) ; 
                     } 
                 
@@ -104,7 +93,7 @@ namespace UserModule_CF_LUTRON_SHADEGROUPS_V1_0
         {
             SplusExecutionContext __context__ = SplusFunctionMainStartCode();
             
-            __context__.SourceCodeLine = 96;
+            __context__.SourceCodeLine = 92;
             WaitForInitializationComplete ( ) ; 
             
             

@@ -97,17 +97,17 @@ namespace QsxDataExtractor
                         }
                         else
                         {
-                            return 4;
+                            return 0;
                         }
                     }
                     else
                     {
-                        return 3;
+                        return 0;
                     }
                 }
                 else
                 {
-                    return 2;
+                    return 0;
                 }
             }
             

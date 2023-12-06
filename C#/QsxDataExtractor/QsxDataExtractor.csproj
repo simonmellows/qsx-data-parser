@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AreaData.cs" />
+    <Compile Include="ShadeGroupData.cs" />
     <Compile Include="ComponentData.cs" />
     <Compile Include="CSVConverter.cs" />
     <Compile Include="DataExtractor.cs" />

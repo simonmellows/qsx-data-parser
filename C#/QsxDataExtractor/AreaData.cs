@@ -10,5 +10,6 @@ namespace QsxDataExtractor
         public List<DeviceData> Devices { get; set; }
         public List<ZoneData> Zones { get; set; }
         public List<SceneData> Scenes { get; set; }
+        public List<ShadeGroupData> ShadeGroups { get; set; }
     }
 }

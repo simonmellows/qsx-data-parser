@@ -21,21 +21,29 @@ namespace QsxDataExtractor
         public string href;
     }
 
+    public struct shadeGroupDataStruct
+    {
+        public string label;
+        public string href;
+    }
+
     public static class DataExtractor
     {   
         static List<AreaData> Areas = new List<AreaData>();
         static List<DeviceData> Devices = new List<DeviceData>();
-        public static List<ComponentData> Components = new List<ComponentData>();
-        public static List<SceneData> Scenes = new List<SceneData>();
-        public static List<ZoneData> Zones = new List<ZoneData>();
+        //public static List<ComponentData> Components = new List<ComponentData>();
+        //public static List<SceneData> Scenes = new List<SceneData>();
+        //public static List<ZoneData> Zones = new List<ZoneData>();
 
         private static readonly object zoneLock = new object();
         private static readonly object sceneLock = new object();
+        private static readonly object shadeGroupLock = new object();
 
         private static string AreaNode = @"Area Name,href";
         private static string SceneNode = "Area Scene Name,href";
         private static string ComponentNode = "Device name,Model,href,Component,Component href,Component Name";
         private static string ZoneNode = "Zone Name,href";
+        private static string ShadeGroupNode = "Shade Group Name,href";
 
         /***************** SIMPL Functions *****************/
         // Getters
@@ -67,6 +75,39 @@ namespace QsxDataExtractor
                 else
                 {
                     return 0;
+                }
+            }
+            
+        }
+        
+        public static int GetShadeGroupData(ref shadeGroupDataStruct myStructArg, string areaHref, int shadeGroup)
+        {
+            lock (shadeGroupLock)
+            {
+                var area = Areas.Find(a => a.Href == areaHref);
+                if (area != null)
+                {
+                    if (area.ShadeGroups != null)
+                    {
+                        if (area.ShadeGroups.ElementAtOrDefault(shadeGroup - 1) != null)
+                        {
+                            myStructArg.label = area.ShadeGroups[shadeGroup - 1].Label;
+                            myStructArg.href = area.ShadeGroups[shadeGroup - 1].Href;
+                            return 1;
+                        }
+                        else
+                        {
+                            return 4;
+                        }
+                    }
+                    else
+                    {
+                        return 3;
+                    }
+                }
+                else
+                {
+                    return 2;
                 }
             }
             
@@ -259,6 +300,7 @@ namespace QsxDataExtractor
                     string ComponentCsvData = ExtractSubstring(ComponentNode, fileText);
                     string SceneCsvData = ExtractSubstring(SceneNode, fileText);
                     string ZoneCsvData = ExtractSubstring(ZoneNode, fileText);
+                    string ShadeGroupCsvData = ExtractSubstring(ShadeGroupNode, fileText);
 
                     char delimiter = ',';
 
@@ -274,6 +316,7 @@ namespace QsxDataExtractor
                             record.Devices = new List<DeviceData>();
                             record.Scenes = new List<SceneData>();
                             record.Zones = new List<ZoneData>();
+                            record.ShadeGroups = new List<ShadeGroupData>();
                             record.Href = (ParseHref(record.Href));
                             Areas.Add(record);
                         }
@@ -319,8 +362,31 @@ namespace QsxDataExtractor
                                 }
                             }
                         }
-                    }
+                    }           
+                    
+                    // Establish Shade Groups
+                    var shadeGroups = CSVConverter.ConvertToClassData<ShadeGroupData>(CleanString(ShadeGroupCsvData), delimiter);
+                    if (shadeGroups != null)
+                    {
+                        foreach (var record in shadeGroups)
+                        {
+                            string[] splitName = record.Name.Split('\\');
+                            record.Label = splitName[splitName.Length - 1];
 
+                            string shadeGroupName = record.Name;
+                            record.Href = ParseHref(record.Href);
+                           
+                            foreach (var area in Areas)
+                            {
+                                if (shadeGroupName.Contains(area.AreaName))
+                                {
+                                    area.ShadeGroups.Add(record);   
+                                }
+                            }
+
+                        }
+                    }
+               
                     // Establish Components
                     var comps = CSVConverter.ConvertToClassData<ComponentData>(CleanString(ComponentCsvData), delimiter);
                     if (comps != null)
@@ -397,6 +463,14 @@ namespace QsxDataExtractor
                             foreach (var Scene in Area.Scenes)
                             {
                                 Console.WriteLine($"Scene: {Scene.Name}, Href: {Scene.Href}, Label: {Scene.Label}");
+                            }
+                        }                        
+                        if (Area.ShadeGroups != null)
+                        {
+                            Console.WriteLine($"Number of scenes: {Area.ShadeGroups.Count}");
+                            foreach (var ShadeGroup in Area.ShadeGroups)
+                            {
+                                Console.WriteLine($"Scene: {ShadeGroup.Name}, Href: {ShadeGroup.Href}, Label: {ShadeGroup.Label}");
                             }
                         }
                     }

@@ -13,7 +13,7 @@ Currently the only compatible CCI modules are:
 ## Implementation
 - Load the QSX integration report to the Crestron processor and point the 'CF Lutron Read' module to its file path.
 - Input Area Href for each area.
-- Input keypad Href for the keypad in each area you want to use for scenes. If left undefined, the Area Scenes will be used (these do not have feedback).
+- Input keypad Href for the keypad in each area you want to use for scenes.
 
 ## Important Notes
 - In Lutron, do not use commas in naming things. As the Crestron modules read CSV (comma separated values), trivial use of commas in naming will cause unexpected behaviour.

@@ -15,6 +15,10 @@ Currently the only CCI compatible CCI modules are:
 - Input Area Href for each area.
 - Input keypad Href for the keypad in each area you want to use for scenes. If left undefined, the Area Scenes will be used (these do not have feedback).
 
+## Important Notes
+- In Lutron, do not use commas in naming things. As the Crestron modules read CSV (comma separated values), trivial use of commas in naming will cause unexpected behaviour.
+- On larger projects (20+ areas), avoid including redundant modules in the program as it will slow the communication between Lutron and Crestron.
+
 # Future Features:
 - Shading module compatibility
 - Ability to determine if a zone is switched or dimmable (will require a different report).

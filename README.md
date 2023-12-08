@@ -11,7 +11,7 @@ Currently the only compatible CCI modules are:
 - Area control
 
 ## Implementation
-- Load the QSX integration report to the Crestron processor and point the module to its file path.
+- Load the QSX integration report to the Crestron processor and point the 'CF Lutron Read' module to its file path.
 - Input Area Href for each area.
 - Input keypad Href for the keypad in each area you want to use for scenes. If left undefined, the Area Scenes will be used (these do not have feedback).
 

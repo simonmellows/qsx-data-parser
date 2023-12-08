@@ -4,7 +4,7 @@ This SIMPL Sharp module reads in a CSV-formatted Lutron QSX Integration report f
 
 SIMPL Windows demo program included with modified CCI modules to accept serial signal Hrefs rather than parameters.
 
-Currently the only CCI compatible CCI modules are:
+Currently the only compatible CCI modules are:
 - Zone control
 - Button control
 - LED control

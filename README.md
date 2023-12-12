@@ -9,6 +9,7 @@ Currently the only compatible CCI modules are:
 - Button control
 - LED control
 - Area control
+- Shading control
 
 ## Implementation
 - Load the QSX integration report to the Crestron processor and point the 'CF Lutron Read' module to its file path.
@@ -20,5 +21,4 @@ Currently the only compatible CCI modules are:
 - On larger projects (20+ areas), avoid including redundant modules in the program as it will slow the communication between Lutron and Crestron.
 
 # Future Features:
-- Shading module compatibility
 - Ability to determine if a zone is switched or dimmable (will require a different report).

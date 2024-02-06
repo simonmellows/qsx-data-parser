@@ -22,3 +22,6 @@ Currently the only compatible CCI modules are:
 
 # Future Features:
 - Ability to determine if a zone is switched or dimmable (will require a different report).
+
+# Bugs:
+- Error parsing CSV if there are no shade groups defined in the integration report. If the line "Shade Group Name,href" is missing from the integration report, debugger will produce the following error: "An error occurred: Invalid CSV data format. As a temporary work-around you can add the line "Shade Group Name,href" to the CSV integration report between the Area Name and Area Scene Name blocks - make sure to leave a carriage return above and below the line.

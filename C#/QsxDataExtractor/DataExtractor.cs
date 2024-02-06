@@ -21,21 +21,29 @@ namespace QsxDataExtractor
         public string href;
     }
 
+    public struct shadeGroupDataStruct
+    {
+        public string label;
+        public string href;
+    }
+
     public static class DataExtractor
     {   
         static List<AreaData> Areas = new List<AreaData>();
         static List<DeviceData> Devices = new List<DeviceData>();
-        public static List<ComponentData> Components = new List<ComponentData>();
-        public static List<SceneData> Scenes = new List<SceneData>();
-        public static List<ZoneData> Zones = new List<ZoneData>();
+        //public static List<ComponentData> Components = new List<ComponentData>();
+        //public static List<SceneData> Scenes = new List<SceneData>();
+        //public static List<ZoneData> Zones = new List<ZoneData>();
 
         private static readonly object zoneLock = new object();
         private static readonly object sceneLock = new object();
+        private static readonly object shadeGroupLock = new object();
 
         private static string AreaNode = @"Area Name,href";
         private static string SceneNode = "Area Scene Name,href";
         private static string ComponentNode = "Device name,Model,href,Component,Component href,Component Name";
         private static string ZoneNode = "Zone Name,href";
+        private static string ShadeGroupNode = "Shade Group Name,href";
 
         /***************** SIMPL Functions *****************/
         // Getters
@@ -52,6 +60,39 @@ namespace QsxDataExtractor
                         {
                             myStructArg.label = area.Zones[zone - 1].Label;
                             myStructArg.href = area.Zones[zone - 1].Href;
+                            return 1;
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            
+        }
+        
+        public static int GetShadeGroupData(ref shadeGroupDataStruct myStructArg, string areaHref, int shadeGroup)
+        {
+            lock (shadeGroupLock)
+            {
+                var area = Areas.Find(a => a.Href == areaHref);
+                if (area != null)
+                {
+                    if (area.ShadeGroups != null)
+                    {
+                        if (area.ShadeGroups.ElementAtOrDefault(shadeGroup - 1) != null)
+                        {
+                            myStructArg.label = area.ShadeGroups[shadeGroup - 1].Label;
+                            myStructArg.href = area.ShadeGroups[shadeGroup - 1].Href;
                             return 1;
                         }
                         else
@@ -259,93 +300,133 @@ namespace QsxDataExtractor
                     string ComponentCsvData = ExtractSubstring(ComponentNode, fileText);
                     string SceneCsvData = ExtractSubstring(SceneNode, fileText);
                     string ZoneCsvData = ExtractSubstring(ZoneNode, fileText);
+                    string ShadeGroupCsvData = ExtractSubstring(ShadeGroupNode, fileText);
 
                     char delimiter = ',';
 
                     //Console.WriteLine(CleanString(ComponentCsvData));
 
                     // Establish Areas
-                    var areas = CSVConverter.ConvertToClassData<AreaData>(CleanString(AreaCsvData), delimiter);
-                    if (areas != null)
+                    if (AreaCsvData != "Substring not found.")
                     {
-                        foreach (var record in areas)
+                        var areas = CSVConverter.ConvertToClassData<AreaData>(CleanString(AreaCsvData), delimiter);
+                        if (areas != null)
                         {
-                            //Console.WriteLine($"Area: {record.AreaName}");
-                            record.Devices = new List<DeviceData>();
-                            record.Scenes = new List<SceneData>();
-                            record.Zones = new List<ZoneData>();
-                            record.Href = (ParseHref(record.Href));
-                            Areas.Add(record);
+                            foreach (var record in areas)
+                            {
+                                //Console.WriteLine($"Area: {record.AreaName}");
+                                record.Devices = new List<DeviceData>();
+                                record.Scenes = new List<SceneData>();
+                                record.Zones = new List<ZoneData>();
+                                record.ShadeGroups = new List<ShadeGroupData>();
+                                record.Href = (ParseHref(record.Href));
+                                Areas.Add(record);
+                            }
                         }
                     }
 
                     // Establish Scenes
-                    var scenes = CSVConverter.ConvertToClassData<SceneData>(CleanString(SceneCsvData), delimiter);
-                    if (scenes != null)
+                    if (SceneCsvData != "Substring not found.")
                     {
-                        foreach (var record in scenes)
+                        var scenes = CSVConverter.ConvertToClassData<SceneData>(CleanString(SceneCsvData), delimiter);
+                        if (scenes != null)
                         {
-                            string[] splitName = record.Name.Split('\\');
-                            record.Label = splitName[splitName.Length - 1];
-
-                            string sceneName = record.Name;
-                            record.Href = ParseHref(record.Href);
-                            foreach (var area in Areas)
+                            foreach (var record in scenes)
                             {
-                                if (sceneName.Contains(area.AreaName))
+                                string[] splitName = record.Name.Split('\\');
+                                record.Label = splitName[splitName.Length - 1];
+
+                                string sceneName = record.Name;
+                                record.Href = ParseHref(record.Href);
+                                foreach (var area in Areas)
                                 {
-                                    area.Scenes.Add(record);
+                                    if (sceneName.Contains(area.AreaName))
+                                    {
+                                        area.Scenes.Add(record);
+                                    }
                                 }
                             }
                         }
                     }
 
                     // Establish Zones
-                    var zones = CSVConverter.ConvertToClassData<ZoneData>(CleanString(ZoneCsvData), delimiter);
-                    if (zones != null)
+                    if (ZoneCsvData != "Substring not found.")
                     {
-                        foreach (var record in zones)
+                        var zones = CSVConverter.ConvertToClassData<ZoneData>(CleanString(ZoneCsvData), delimiter);
+                        if (zones != null)
                         {
-                            string[] splitName = record.Name.Split('\\');
-                            record.Label = splitName[splitName.Length - 1];
-
-                            string zoneName = record.Name;
-                            record.Href = ParseHref(record.Href);
-                            foreach (var area in Areas)
+                            foreach (var record in zones)
                             {
-                                if (zoneName.Contains(area.AreaName))
+                                string[] splitName = record.Name.Split('\\');
+                                record.Label = splitName[splitName.Length - 1];
+
+                                string zoneName = record.Name;
+                                record.Href = ParseHref(record.Href);
+                                foreach (var area in Areas)
                                 {
-                                    area.Zones.Add(record);
+                                    if (zoneName.Contains(area.AreaName))
+                                    {
+                                        area.Zones.Add(record);
+                                    }
                                 }
+                            }
+                        }
+                    }
+                    
+                    // Establish Shade Groups
+                    if(ShadeGroupCsvData != "Substring not found.")
+                    {
+                        var shadeGroups = CSVConverter.ConvertToClassData<ShadeGroupData>(CleanString(ShadeGroupCsvData), delimiter);
+                        if (shadeGroups != null)
+                        {
+                            foreach (var record in shadeGroups)
+                            {
+                                string[] splitName = record.Name.Split('\\');
+                                record.Label = splitName[splitName.Length - 1];
+
+                                string shadeGroupName = record.Name;
+                                record.Href = ParseHref(record.Href);
+
+                                foreach (var area in Areas)
+                                {
+                                    if (shadeGroupName.Contains(area.AreaName))
+                                    {
+                                        area.ShadeGroups.Add(record);
+                                    }
+                                }
+
                             }
                         }
                     }
 
                     // Establish Components
-                    var comps = CSVConverter.ConvertToClassData<ComponentData>(CleanString(ComponentCsvData), delimiter);
-                    if (comps != null)
+                    if (ComponentCsvData != "Substring not found.")
                     {
-                        ComponentData previousRecord = null;
-
-                        foreach (var record in comps)
+                        var comps = CSVConverter.ConvertToClassData<ComponentData>(CleanString(ComponentCsvData), delimiter);
+                        if (comps != null)
                         {
-                            if (record.DeviceName.Length < 1 && previousRecord != null)
-                            {
-                                record.DeviceName = previousRecord.DeviceName;
-                                record.DeviceModel = previousRecord.DeviceModel;
-                                record.DeviceHref = previousRecord.DeviceHref;
-                            }
-                            else
-                            {
-                                record.DeviceHref = ParseHref(record.DeviceHref);
-                            }
-                            record.Number = ParseNumber(record.Component);
-                            record.Type = parseType(record.Href);
-                            record.Href = ParseHref(record.Href);
+                            ComponentData previousRecord = null;
 
-                            AddDataToMatchingDevice(record);
-                            previousRecord = record;
+                            foreach (var record in comps)
+                            {
+                                if (record.DeviceName.Length < 1 && previousRecord != null)
+                                {
+                                    record.DeviceName = previousRecord.DeviceName;
+                                    record.DeviceModel = previousRecord.DeviceModel;
+                                    record.DeviceHref = previousRecord.DeviceHref;
+                                }
+                                else
+                                {
+                                    record.DeviceHref = ParseHref(record.DeviceHref);
+                                }
+                                record.Number = ParseNumber(record.Component);
+                                record.Type = parseType(record.Href);
+                                record.Href = ParseHref(record.Href);
 
+                                AddDataToMatchingDevice(record);
+                                previousRecord = record;
+
+                            }
                         }
                     }
 
@@ -397,6 +478,14 @@ namespace QsxDataExtractor
                             foreach (var Scene in Area.Scenes)
                             {
                                 Console.WriteLine($"Scene: {Scene.Name}, Href: {Scene.Href}, Label: {Scene.Label}");
+                            }
+                        }                        
+                        if (Area.ShadeGroups != null)
+                        {
+                            Console.WriteLine($"Number of scenes: {Area.ShadeGroups.Count}");
+                            foreach (var ShadeGroup in Area.ShadeGroups)
+                            {
+                                Console.WriteLine($"Scene: {ShadeGroup.Name}, Href: {ShadeGroup.Href}, Label: {ShadeGroup.Label}");
                             }
                         }
                     }

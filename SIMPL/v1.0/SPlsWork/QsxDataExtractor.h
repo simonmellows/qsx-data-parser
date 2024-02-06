@@ -3,6 +3,7 @@ namespace QsxDataExtractor;
          class ComponentData;
          class sceneDataStruct;
          class zoneDataStruct;
+         class shadeGroupDataStruct;
          class DataExtractor;
          class SceneData;
          class ZoneData;
@@ -65,6 +66,23 @@ namespace QsxDataExtractor;
         // class properties
     };
 
+     class shadeGroupDataStruct 
+    {
+        // class delegates
+
+        // class events
+
+        // class functions
+        STRING_FUNCTION ToString ();
+        SIGNED_LONG_INTEGER_FUNCTION GetHashCode ();
+
+        // class variables
+        STRING label[];
+        STRING href[];
+
+        // class properties
+    };
+
     static class DataExtractor 
     {
         // class delegates
@@ -73,6 +91,7 @@ namespace QsxDataExtractor;
 
         // class functions
         static SIGNED_LONG_INTEGER_FUNCTION GetZoneData ( BYREF zoneDataStruct myStructArg , STRING areaHref , SIGNED_LONG_INTEGER zone );
+        static SIGNED_LONG_INTEGER_FUNCTION GetShadeGroupData ( BYREF shadeGroupDataStruct myStructArg , STRING areaHref , SIGNED_LONG_INTEGER shadeGroup );
         static SIGNED_LONG_INTEGER_FUNCTION GetSceneData ( BYREF sceneDataStruct myStructArg , STRING areaHref , SIGNED_LONG_INTEGER scene , STRING keypadHref );
         static STRING_FUNCTION ExtractSubstring ( STRING startLine , STRING sourceString );
         static FUNCTION AddDataToMatchingDevice ( ComponentData component );

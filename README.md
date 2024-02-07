@@ -1,4 +1,4 @@
-c# QSX Data Parser
+# QSX Data Parser
  
 This SIMPL Sharp module reads in a CSV-formatted Lutron QSX Integration report from a processor and parses the data to output Hrefs and label info associated with the Lutron components. 
 

@@ -28,4 +28,4 @@ Currently the only compatible CCI modules are:
 
 ## Fixed
 - Error parsing CSV if there are no shade groups defined in the integration report. If the line "Shade Group Name,href" is missing from the integration report, debugger will produce the following error: "An error occurred: Invalid CSV data format.
-  - FIX: If using version with this issue, download latest version and overwrite the clz file in the problematic project (no need to overwrite SIMPL modules).
+  - **FIX**: If using version with this issue, download latest version and overwrite the clz file in the problematic project (no need to overwrite SIMPL modules).

@@ -12,7 +12,7 @@ Currently the only compatible CCI modules are:
 - Shading control
 
 ## Implementation
-- Load the QSX integration report to the Crestron processor and point the 'CF Lutron Read' module to its file path.
+- Load the QSX integration report (**must be in .csv format**) to the Crestron processor and point the 'CF Lutron Read' module to its file path.
 - Input Area Href for each area.
 - Input keypad Href for the keypad in each area you want to use for scenes.
 

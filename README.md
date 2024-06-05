@@ -1,13 +1,14 @@
 # QSX Data Parser
+
+## Latest version now works with Control Concepts' v1.3 modules
  
 This SIMPL Sharp module reads in a CSV-formatted Lutron QSX Integration report from a processor and parses the data to output Hrefs and label info associated with the Lutron components. 
 
-SIMPL Windows demo program included with modified CCI modules to accept serial signal Hrefs rather than parameters.
+SIMPL Windows demo program included with modified Control Concepts modules to accept serial signal Hrefs rather than parameters.
 
-Currently the only compatible CCI modules are:
+Currently the only compatible Control Concepts v1.3 modules are:
 - Zone control
-- Button control
-- LED control
+- Keypad control
 - Area control
 - Shading control
 
